@@ -1,0 +1,46 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background: #16191d;
+}
+
+/* Estilo por defecto (tema oscuro) */
+.nav-bar {
+    @apply bg-colorCuerpo h-14 p-2 flex justify-between items-center fixed top-0 left-0 w-full z-50;
+    -webkit-backdrop-filter: blur(2px); 
+    backdrop-filter: blur(8px); 
+}
+
+.nav-bar-scrolled {
+    @apply bg-opacity-90; 
+}
+
+
+.nav-bar-btn {
+    @apply rounded-md cursor-pointer hover:bg-gray-700 p-2;
+}
+
+/* Estilo por defecto (tema claro) */
+.body-dia {
+    @apply bg-[url('/public/img/fondo.webp')] bg-cover bg-center bg-fixed flex flex-col justify-between;
+}
+
+
+.nav-bar-dia {
+    @apply bg-diaColor p-2 flex justify-between items-center;
+}
+
+.nav-bar-btn-dia {
+    @apply rounded-md cursor-pointer hover:bg-gray-300 p-3;
+}
+
+/* Cambiar borde del contenedor según el tema */
+.border-negro {
+    @apply border-black;
+  }
+  
+

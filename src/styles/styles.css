@@ -1,0 +1,102 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilo para header y abaut */
+.content-header {
+    @apply  mt-16;
+}
+
+.header-inicio{
+    @apply  w-5/6 max-w-full my-0 mx-auto grid gap-2
+}
+
+.img-inicio{
+    @apply  relative flex justify-end items-center py-2
+}
+
+.img-logo{
+    @apply absolute top-0 w-40 h-40 transform  -translate-y-1/2 left-0 rounded-full aspect-square  border-4 
+}
+
+.button{
+    @apply bg-rosa  flex gap-x-2 items-center text-white px-2 py-1 rounded-full border-[3px] border-transparent hover:border-white;
+}
+
+.title-1 {
+    @apply text-white  text-4xl font-extrabold  mt-6;  
+}
+
+.title-2 {
+    @apply  text-white text-3xl font-bold  mt-6;  
+}
+
+.parrafo{
+    @apply mb-3  text-white text-base font-normal;
+}
+
+.text-negro {
+    @apply text-black;
+}
+
+.dato-descripcion{
+    @apply flex gap-x-4 items-center  flex-wrap font-medium;
+}
+
+.correo-descripion{
+    @apply my-4 grid  gap-y-1 justify-center text-center;
+}
+
+.button-correo{
+    @apply bg-rosa font-bold border-transparent border-4 rounded-r-full flex gap-x-1 hover:border-white items-center text-white px-3 py-1;
+}
+
+.nav-descripcion{
+    @apply flex w-full overflow-auto items-center text-sm ;
+}
+
+.nav-opciones{
+    @apply flex-grow dark:hover:bg-gray-800  ;
+}
+
+.button-opciones{
+    @apply flex items-center justify-center w-full h-full text-lg hover:no-underline focus:outline-none;
+}
+
+.opcion-seleccionada{
+    @apply   text-white mx-auto;
+}
+
+.border-pink-500 {
+    border-bottom: 3px solid #ec4899;
+}
+
+.text-black {
+    color: black;
+}
+  
+.text-white {
+    color: white;
+}    
+
+.button-copiar{
+    @apply p-2 px-4 flex-grow rounded-l-full bg-black text-neutral-400;
+}
+
+.button-copiar-claro{
+    @apply p-2 px-4 flex-grow rounded-l-full bg-white text-neutral-400;
+}
+
+.title-3 {
+    @apply mb-3 text-base font-semibold text-white md:text-xl;
+}
+
+.body-dia .title-3 {
+    @apply text-gray-900;
+}
+
+.dark .title-3 {
+    @apply text-white;
+}

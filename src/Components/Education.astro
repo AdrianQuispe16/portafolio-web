@@ -1,0 +1,71 @@
+---
+import "../styles/styles.css";
+
+import EducacionInfo from "./EducacionInfo.astro";
+
+const Educacion = [
+  {
+    date: "Formación Continua - Autodidacta",
+    escuela:
+      " Plataformas de Aprendisaje en Linea (Udemy / Cursera / Edetem /etc.)",
+    carrera: "Cursos de Tecnologia",
+    description:
+      "Soy autodidacta y apasionado por el aprendizaje continuo, me esfuerzo por mantenerme a la vanguardia de las últimas tendencias tecnológicas. Aprovecho diversas plataformas de aprendizaje en línea para enriquecer mis habilidades y conocimientos, lo que me permite estar siempre estar aprediendo nuevas tecnologias y estar preparado para afrontar cualquier desafio.",
+    ruta: "/img/auto.webp",
+    enlace: "#",
+  },
+  {
+    date: "Enero 2024 - Febrero 2024 ",
+    escuela: "UNI - Universidad Nacional de Ingenieria",
+    carrera: "Fundamentos de Linux",
+    description:
+      "Curso de Fundamentos de Linux en la Universidad Nacional de Ingeniería (UNI), donde aprendí los principios clave del sistema operativo Linux. Durante el curso, desarrollé habilidades en el uso de la terminal, gestión de archivos, permisos, usuarios y automatización de tareas con scripts. Además, adquirí conocimientos sobre procesos, redes y seguridad, fortaleciendo mi capacidad para trabajar en entornos Linux, esenciales en el desarrollo de software y la administración de servidores.",
+    ruta: "/img/uni.webp",
+    enlace: "https://cursos-ctic.uni.edu.pe/",
+  },
+  {
+    date: "Agosto 2021 - Julio 2024",
+    escuela:
+      "SENATI - Servicio Nacional de Adiestramiento en Trabajo Industrial",
+    carrera: "Ingenieria de Sofware con Inteligencia Artificial",
+    description:
+      "Soy Técnico Titulado en Ingenieria de Sofware con Inteligencia Artificial por SENATI, con una formación de tres años en la cual adquirí sólidos conocimientos en análisis, diseño e implementación de soluciones tecnológicas. Durante mi formación, desarrollé habilidades en programación Full Stack, bases de datos, arquitectura de software y metodologías ágiles, aplicando tecnologías modernas para la creación de aplicaciones web y multiplataforma.",
+    ruta: "/img/senati.webp",
+    enlace: "https://www.senati.edu.pe/",
+  },
+  {
+    date: "Septiembre 2022 - Febrero 2023",
+    escuela: "Programa ONE (Oracle Next Education) ",
+    carrera: "PROGRAMADOR FULL STACK",
+    description:
+      "Formé parte del programa ONE (Oracle Next Education), donde adquirí y perfeccioné mis habilidades en desarrollo Full Stack. A lo largo de este curso, profundicé en las tecnologías más actuales de programación, tanto en el backend como en el frontend, lo que me permitió fortalecer mis conocimientos y aplicar soluciones integrales en el desarrollo de aplicaciones web completas.",
+
+    ruta: "/img/one.webp",
+    enlace: "https://www.oracle.com/pe/education/oracle-next-education/",
+  },
+  {
+    date: "Abril 2021 - Julio 2021",
+    escuela: "Beca Empleabilidad (Ministerio de Trabajo del Perú) ",
+    carrera: "Programming Essentials in Python (CISCO)",
+    description:
+      "Fui beneficiario de la Beca Empleabilidad otorgada por el Ministerio de Trabajo del Perú, lo que marcó el inicio de mi carrera profesional en el desarrollo de software. Durante este programa, me introduje al mundo de la programación con mi primer lenguaje de programación, Python. ",
+    ruta: "/img/mtp.webp",
+    enlace:
+      "https://cdn.www.gob.pe/uploads/document/file/1859700/Preguntas_frecuentes.pdf",
+  },
+];
+---
+
+<div id="education" hidden>
+  <div class="header-inicio">
+    <h1 class="title-2">Mi Educación 📚</h1>
+    <p class="parrafo">
+      A lo largo de mi carrera como desarrollador, he adquirido conocimientos en
+      diversas plataformas, cursos e instituciones, los cuales me han permitido
+      fortalecer mis habilidades y seguir aprendiendo para avanzar en mi camino
+      profesional.
+    </p>
+    {Educacion.map((educacion) => <EducacionInfo educacion={educacion} />)}
+    
+  </div>
+</div>

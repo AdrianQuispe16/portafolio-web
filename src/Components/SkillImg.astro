@@ -1,0 +1,35 @@
+---
+interface Props {
+  skill?: {
+    url: string;
+    nombre: string;
+    porcentaje: string;
+    width: string;
+  };
+}
+
+// Validar si `skill` está definido antes de desestructurar
+const skill = Astro.props.skill || {
+  url: "Sin URL",
+  nombre: "Sin nombre",
+  porcentaje: "0%",
+  width: "0%",
+};
+
+const { url, nombre, porcentaje, width } = skill;
+---
+
+<li
+  class="p-3 m-1 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-600 dark:hover:bg-gray-500 dark:text-white"
+>
+  <div class="flex justify-between">
+    <div class="flex mt-1">
+      <img src={url} alt="" class="size-8 object-contain object-center" />
+      <span class="ms-2 text-base font-medium dark:text-white">{nombre}</span>
+    </div>
+    <span class="text-sm font-medium dark:text-white">{porcentaje}</span>
+  </div>
+  <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+    <div class="bg-rosa h-2.5 rounded-full" style={{ width }}></div>
+  </div>
+</li>

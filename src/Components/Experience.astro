@@ -1,0 +1,43 @@
+---
+import LineExperiencia from "./LineExperiencia.astro";
+
+const JOBS = [
+  {
+    date: "Febrero 2024 - Presente",
+    empresa: "J.R.Z. Ajustadores y Peritos de Seguros SAC ",
+    puesto: "Analista - Programador",
+    description:
+      "Desarrollé y diseñé un sistema que abarcó todas las etapas del proceso, desde la identificación de requisitos hasta su implementación exitosa. Este sistema permitió la digitalización de formatos físicos, impulsando la innovación dentro de la empresa, Utilizando tecnología para automatizar procesos internos y mejorar la eficiencia operativa. ",
+    ruta:"/img/JRZ.webp",
+    enlace: "https://www.linkedin.com/company/jrz-ajustadores-y-peritos-de-seguros-sac/posts/?feedView=all"
+  },
+  {
+    date: "Diciembre 2022 - Diciembre 2023",
+    empresa: "Neon Hause Led",
+    puesto: "Programador Full Stack",
+    description:
+      "Contribuí al desarrollo de un sistema de escritorio de asistencia para la empresa, trabajando en conjunto con el equipo de programadores. También, participé activamente en la mejora y el mantenimiento de los sitios web, optimizando tanto la eficiencia de los sistemas como la experiencia del usuario. ",
+    ruta:"/img/NHL.webp",
+    enlace: "https://nhldecoracioncomercial.com/"
+  },
+];
+---
+
+<div id="experience" hidden>
+  <div class="header-inicio">
+    <h1 class="title-2">Mi experiencia 👇.</h1>
+    <p class="parrafo">
+      Soy desarrollador Full Stack con más de dos años de experiencia en el diseño e implementación de soluciones tecnológicas. Además, cuento con experiencia en metodologías ágiles, garantizando una gestión efectiva de proyectos y una colaboración eficiente en equipos de desarrollo.
+    </p>
+    <div class="px-3">
+    <ol class="relative border-s border-gray-200 dark:border-gray-700 p-3 m-3">
+      {JOBS.map((job) => <LineExperiencia job={job} />)}
+    </ol>
+  </div>
+  </div>
+</div>
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">                  
+
+</ol>
+

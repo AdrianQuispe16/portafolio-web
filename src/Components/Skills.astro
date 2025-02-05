@@ -1,0 +1,269 @@
+---
+import "../styles/styles.css";
+import SkillImg from "./SkillImg.astro";
+const Skill = [
+  {
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+    nombre: "Python",
+    porcentaje: "60%",
+    width: "60%",
+  },
+  {
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+    nombre: "Java",
+    porcentaje: "50%",
+    width: "50%",
+  },
+  {
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg",
+    nombre: "php",
+    porcentaje: "70%",
+    width: "70%",
+  },
+  {
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+    nombre: "JavaScript",
+    porcentaje: "50%",
+    width: "50%",
+  },
+  {
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+    nombre: "HTML",
+    porcentaje: "90%",
+    width: "90%",
+  },
+  {
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+    nombre: "CSS",
+    porcentaje: "90%",
+    width: "90%",
+  },
+  {
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg",
+    nombre: "SQLServer",
+    porcentaje: "55%",
+    width: "55%",
+  },
+  {
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/oracle/oracle-original.svg",
+    nombre: "ORACLE",
+    porcentaje: "50%",
+    width: "50%",
+  },
+  {
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
+    nombre: "Laravel",
+    porcentaje: "65%",
+    width: "65%",
+  },
+  {
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg",
+    nombre: "Spring Boot",
+    porcentaje: "70%",
+    width: "70%",
+  },
+  {
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg",
+    nombre: "Angular",
+    porcentaje: "50%",
+    width: "50%",
+  },
+  {
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg",
+    nombre: "Sharp",
+    porcentaje: "70%",
+    width: "70%",
+  },
+  {
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg",
+    nombre: ".Net",
+    porcentaje: "40%",
+    width: "40%",
+  },
+  {
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg",
+    nombre: "Go",
+    porcentaje: "60%",
+    width: "60%",
+  },
+  {
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/astro/astro-original.svg",
+    nombre: "Astro",
+    porcentaje: "80%",
+    width: "80%",
+  },
+  {
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
+    nombre: "Tailwindcss",
+    porcentaje: "70%",
+    width: "70%",
+  },
+  {
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg",
+    nombre: "MongoDB",
+    porcentaje: "60%",
+    width: "60%",
+  },
+  {
+    url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
+    nombre: "Linux",
+    porcentaje: "70%",
+    width: "70%",
+  },
+  {
+    url: "img/PowerBi.png",
+    nombre: "Power BI",
+    porcentaje: "60%",
+    width: "60%",
+  },
+  {
+    url: "img/excel.png",
+    nombre: "Excel",
+    porcentaje: "65%",
+    width: "65%",
+  },
+];
+---
+
+<div id="skills" hidden>
+  <div class="header-inicio">
+    <h1 class="title-2">Mi Habilidades 🚀</h1>
+    <p class="parrafo">
+      Cuento con habilidades sólidas en desarrollo Full Stack, lo que me permite
+      afrontar desafíos tecnológicos con creatividad y eficiencia. Tengo un buen
+      dominio del frontend y backend, enfocado en la optimización, escalabilidad
+      y calidad del código para crear soluciones funcionales e innovadoras.
+    </p>
+    <h5
+      class="title-3"
+    >
+      Conocimientos tecnológicos
+    </h5>
+
+    <div id="accordion-nested-parent" data-accordion="collapse">
+      <h2 id="accordion-collapse-heading-1">
+        <button
+          type="button"
+          class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border  border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+          data-accordion-target="#accordion-collapse-body-1"
+          aria-expanded="false"
+          aria-controls="accordion-collapse-body-1"
+        >
+          <span>NIVEL INTERMEDIO</span>
+          <svg
+            data-accordion-icon
+            class="w-3 h-3  shrink-0"
+            aria-hidden="false"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 10 6"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5 5 1 1 5"></path>
+          </svg>
+        </button>
+      </h2>
+      <div
+        id="accordion-collapse-body-1"
+        class="hidden"
+        aria-labelledby="accordion-collapse-heading-1"
+      >
+        <div
+          class="p-5 border rounded-b-xl border-gray-200 dark:border-gray-700 dark:bg-gray-900"
+        >
+          <ul class="my-1 space-y-1 ">
+            {Skill.slice(0, 8).map((skill) => <SkillImg skill={skill} />)}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="accordion-nested-parent" data-accordion="collapse">
+      <h2 id="accordion-collapse-heading-2">
+        <button
+          type="button"
+          class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border  border-gray-200  focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+          data-accordion-target="#accordion-collapse-body-2"
+          aria-expanded="false"
+          aria-controls="accordion-collapse-body-2"
+        >
+          <span>NIVEL BASICO</span>
+          <svg
+            data-accordion-icon
+            class="w-3 h-3  shrink-0"
+            aria-hidden="false"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 10 6"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5 5 1 1 5"></path>
+          </svg>
+        </button>
+      </h2>
+      <div
+        id="accordion-collapse-body-2"
+        class="hidden"
+        aria-labelledby="accordion-collapse-heading-2"
+      >
+        <div
+          class="p-5 border rounded-b-xl border-gray-200 dark:border-gray-700 dark:bg-gray-900"
+        >
+          <ul class="my-1 space-y-1 ">
+            {Skill.slice(8, 17).map((skill) => <SkillImg skill={skill} />)}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="accordion-nested-parent" data-accordion="collapse">
+      <h2 id="accordion-collapse-heading-3">
+        <button
+          type="button"
+          class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border  border-gray-200  focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
+          data-accordion-target="#accordion-collapse-body-3"
+          aria-expanded="false"
+          aria-controls="accordion-collapse-body-3"
+        >
+          <span>OTROS PROGRAMAS</span>
+          <svg
+            data-accordion-icon
+            class="w-3 h-3  shrink-0"
+            aria-hidden="false"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 10 6"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 5 5 1 1 5"></path>
+          </svg>
+        </button>
+      </h2>
+      <div
+        id="accordion-collapse-body-3"
+        class="hidden"
+        aria-labelledby="accordion-collapse-heading-3"
+      >
+        <div
+          class="p-5 border rounded-b-xl border-gray-200 dark:border-gray-700 dark:bg-gray-900"
+        >
+          <ul class="my-1 space-y-1 ">
+            {Skill.slice(17, 20).map((skill) => <SkillImg skill={skill} />)}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

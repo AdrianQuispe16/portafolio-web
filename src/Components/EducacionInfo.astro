@@ -1,0 +1,58 @@
+---
+interface Props {
+  educacion?: {
+    date: string;
+    escuela: string;
+    carrera: string;
+    description: string;
+    ruta: string;
+    enlace: string;
+  };
+}
+
+// Validar si `job` está definido antes de desestructurar
+const educacion = Astro.props.educacion || {
+  date: "No disponible",
+  escuela: "Sin título",
+  carrera: "Sin carrera",
+  description: "Sin descripción",
+  ruta: "Sin ruta",
+  enlace: "Sin enlace",
+};
+const { date, escuela, description, carrera, ruta, enlace } = educacion;
+---
+
+<article
+  class="md:gap-8 md:grid md:grid-cols-3 p-4 mt-2 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+>
+  <div class="mt-4">
+    <div class="flex justify-center items-center mb-6">
+      <img class="w-32 h-32 rounded-full object-cover" src={ruta} alt="" />
+    </div>
+    <aside class="flex items-center mt-3">
+      <a
+        href={enlace}
+        class="inline-flex items-center text-sm font-bold hover:underline dark:text-rosa"
+      >
+        {escuela}
+      </a>
+    </aside>
+  </div>
+  <div class="col-span-2 mt-6 md:mt-0">
+    <div class="flex items-start mb-5">
+      <div class="pe-4">
+        <footer>
+          <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
+            <time datetime="2022-01-20 19:00">{date}</time>
+          </p>
+        </footer>
+        <h4 class="text-xl font-bold text-gray-900 dark:text-white">
+          {carrera}
+        </h4>
+      </div>
+    </div>
+    <p class="mb-2 text-gray-500 dark:text-gray-400">
+      {description}
+    </p>
+  </div>
+</article>

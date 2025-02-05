@@ -1,0 +1,78 @@
+---
+import "../styles/NavBar.css";
+---
+
+<nav class="nav-bar">
+  <button class="nav-bar-btn">
+      <img src="img/logo1.webp" alt="Logo" class="w-9">
+  </button>
+  <button class="nav-bar-btn" id="themeToggleBtn">
+      <!-- Icono de luna -->
+      <svg xmlns="http://www.w3.org/2000/svg" id="iconMoon" class="w-7 h-7" fill="white" viewBox="0 0 24 24" stroke="none" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+      </svg>
+      <!-- Icono de sol (oculto por defecto) -->
+      <svg xmlns="http://www.w3.org/2000/svg" id="iconSun" class="w-7 h-7 hidden" viewBox="0 0 100 100" fill="none">
+        <circle cx="50" cy="50" r="20" fill="black" />
+        <line x1="50" y1="5" x2="50" y2="20" stroke="black" stroke-width="4" />
+        <line x1="50" y1="95" x2="50" y2="80" stroke="black" stroke-width="4" />
+        <line x1="5" y1="50" x2="20" y2="50" stroke="black" stroke-width="4" />
+        <line x1="95" y1="50" x2="80" y2="50" stroke="black" stroke-width="4" />
+        <line x1="20" y1="20" x2="30" y2="30" stroke="black" stroke-width="4" />
+        <line x1="80" y1="80" x2="70" y2="70" stroke="black" stroke-width="4" />
+        <line x1="20" y1="80" x2="30" y2="70" stroke="black" stroke-width="4" />
+        <line x1="80" y1="20" x2="70" y2="30" stroke="black" stroke-width="4" />
+      </svg>
+    </svg>
+  </button>
+</nav>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const themeToggleBtn = document.getElementById("themeToggleBtn");
+    const iconMoon = document.getElementById("iconMoon");
+    const iconSun = document.getElementById("iconSun");
+    const body = document.body;
+    const navBar = document.querySelector(".nav-bar");
+    const btnNav = document.querySelectorAll(".nav-bar-btn");
+    const navBarButtons = document.querySelectorAll(".button, .button-correo");
+    const titlesAndParagraphs = document.querySelectorAll(".title-1, .title-2, .title-3, .parrafo, li");
+    const imgLogo = document.querySelector(".img-logo");
+    const buttonCopiar = document.querySelector(".button-copiar");
+
+    themeToggleBtn.addEventListener("click", () => {
+        if (body.classList.contains("body-dia")) {
+            // Cambiar al modo oscuro
+            body.classList.remove("body-dia");
+            iconMoon.classList.remove("hidden");
+            iconSun.classList.add("hidden");
+            navBar.classList.remove("nav-bar-dia");
+            btnNav.forEach((btn) => btn.classList.remove("nav-bar-btn-dia"));
+            navBarButtons.forEach((btn) => {
+                btn.classList.remove("hover:border-black");
+                btn.classList.add("hover:border-white");
+            });
+            titlesAndParagraphs.forEach((el) => el.classList.remove("text-negro"));
+            imgLogo.classList.remove("border-negro");
+            buttonCopiar.classList.remove("button-copiar-claro");
+
+        } else {
+            // Cambiar al modo claro
+            body.classList.add("body-dia");
+            iconMoon.classList.add("hidden");
+            iconSun.classList.remove("hidden");
+            navBar.classList.add("nav-bar-dia");
+            btnNav.forEach((btn) => btn.classList.add("nav-bar-btn-dia"));
+            navBarButtons.forEach((btn) => {
+                btn.classList.remove("hover:border-white");
+                btn.classList.add("hover:border-black");
+            });
+            titlesAndParagraphs.forEach((el) => el.classList.add("text-negro"));
+            imgLogo.classList.add("border-negro");
+            buttonCopiar.classList.add("button-copiar-claro");
+        }
+    });
+});
+;
+</script>
+
