@@ -13,7 +13,8 @@ export default {
 				colorOpciones: '#868e96',
 			},
 			width: {
-				tamañoCuerpo: '740px', 
+				tamañoCuerpo: '760px', 
+        tamañoTelefono: '520px',
 			},
 		},
 	},
