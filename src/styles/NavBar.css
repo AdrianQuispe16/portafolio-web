@@ -41,6 +41,5 @@ body {
 /* Cambiar borde del contenedor según el tema */
 .border-negro {
     @apply border-black;
-  }
-  
+}
 
