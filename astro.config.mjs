@@ -8,5 +8,6 @@ export default defineConfig({
   integrations: [tailwind()],
   site: 'https://adrianquispe16.github.io/portafolio-web/',
   base: '/portafolio-web/',
-  trailingSlash: "always"
+  trailingSlash: "always",
+  output: 'static'
 });
