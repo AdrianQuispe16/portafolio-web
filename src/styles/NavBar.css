@@ -5,7 +5,8 @@
 @tailwind utilities;
 
 body {
-    background: #16191d;
+    @apply block;
+    background: #16191d ;
 }
 
 /* Estilo por defecto (tema oscuro) */
@@ -26,9 +27,8 @@ body {
 
 /* Estilo por defecto (tema claro) */
 .body-dia {
-    @apply bg-[url('/public/img/fondo.webp')] bg-cover bg-center bg-fixed flex flex-col justify-between;
+    @apply bg-[url('/public/img/fondo.webp')] bg-cover bg-center bg-fixed block;
 }
-
 
 .nav-bar-dia {
     @apply bg-diaColor p-2 flex justify-between items-center;
