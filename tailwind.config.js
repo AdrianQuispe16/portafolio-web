@@ -13,7 +13,7 @@ export default {
 				colorOpciones: '#868e96',
 			},
 			width: {
-				tamañoCuerpo: '730px', 
+				tamañoCuerpo: '740px', 
 			},
 		},
 	},
