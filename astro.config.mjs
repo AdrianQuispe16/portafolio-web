@@ -8,7 +8,5 @@ export default defineConfig({
   integrations: [tailwind()],
   site: 'https://AdrianQuispe16.github.io',
   base: '/portafolio-web/',
-  build: {
-    format: 'directory'
-  }
+  trailingSlash: "always"
 });
