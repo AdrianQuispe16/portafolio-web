@@ -1,5 +1,9 @@
+// @ts-check
 import { defineConfig } from 'astro/config';
+
 import tailwind from '@astrojs/tailwind';
+
+// https://astro.build/config
 
 export default defineConfig({
   integrations: [tailwind()],
@@ -9,7 +13,6 @@ export default defineConfig({
   output: 'static',
   vite: {
     build: {
-      assetsInlineLimit: 0, // ⬅️ Asegura que los assets no se inyecten como base64
       rollupOptions: {
         output: {
           assetFileNames: "[name].[ext]"
