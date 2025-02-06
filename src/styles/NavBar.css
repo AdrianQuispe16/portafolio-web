@@ -6,7 +6,9 @@
 
 body {
     @apply block;
-    background: #16191d ;
+    background: #16191d;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 /* Estilo por defecto (tema oscuro) */
@@ -27,7 +29,7 @@ body {
 
 /* Estilo por defecto (tema claro) */
 .body-dia {
-    @apply bg-[url('/public/img/fondo.webp')] bg-cover bg-center bg-fixed block;
+    @apply bg-[url('/public/img/fondo.webp')] bg-cover bg-center bg-scroll block;
 }
 
 .nav-bar-dia {
