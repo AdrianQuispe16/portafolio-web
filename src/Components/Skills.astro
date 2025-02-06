@@ -125,7 +125,6 @@ const Skill = [
 ];
 ---
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
 <div id="skills" hidden>
   <div class="header-inicio">
     <h1 class="title-2">Mi Habilidades 🚀</h1>
@@ -268,3 +267,25 @@ const Skill = [
     </div>
   </div>
 </div>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  const accordionButtons = document.querySelectorAll('button[aria-expanded]');
+
+  accordionButtons.forEach(button => {
+    button.addEventListener('click', function () {
+      const targetId = button.getAttribute('aria-controls');
+      const targetBody = document.getElementById(targetId);
+      const isExpanded = button.getAttribute('aria-expanded') === 'true'; 
+
+      button.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
+
+      if (isExpanded) {
+        targetBody.classList.add('hidden');
+      } else {
+        targetBody.classList.remove('hidden');
+      }
+    });
+  });
+});
+
+</script>
