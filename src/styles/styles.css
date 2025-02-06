@@ -6,9 +6,8 @@
 
 /* Estilo para header y abaut */
 .content-header {
-    @apply mt-16 ;
+    @apply  mt-[3rem];
 }
-
 
 .header-inicio{
     @apply  w-5/6 max-w-full my-0 mx-auto grid gap-2
