@@ -53,6 +53,13 @@ const Skill = [
   {
     url: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg",
     nombre: "Laravel",
+    porcentaje: "55%",
+    width: "55%",
+  },
+  
+  {
+    url: "img/node.png",
+    nombre: "Node Js",
     porcentaje: "65%",
     width: "65%",
   },
@@ -119,9 +126,16 @@ const Skill = [
   {
     url: "img/excel.png",
     nombre: "Excel",
+    porcentaje: "60%",
+    width: "60%",
+  },
+  {
+    url: "img/git.png",
+    nombre: "Git Hub",
     porcentaje: "65%",
     width: "65%",
   },
+
 ];
 ---
 
@@ -176,7 +190,7 @@ const Skill = [
           class="p-5 border rounded-b-xl border-gray-200 dark:border-gray-700 dark:bg-gray-900"
         >
           <ul class="my-1 space-y-1 ">
-            {Skill.slice(0, 8).map((skill) => <SkillImg skill={skill} />)}
+            {Skill.slice(0, 9).map((skill) => <SkillImg skill={skill} />)}
           </ul>
         </div>
       </div>
@@ -218,7 +232,7 @@ const Skill = [
           class="p-5 border rounded-b-xl border-gray-200 dark:border-gray-700 dark:bg-gray-900"
         >
           <ul class="my-1 space-y-1 ">
-            {Skill.slice(8, 17).map((skill) => <SkillImg skill={skill} />)}
+            {Skill.slice(9, 18).map((skill) => <SkillImg skill={skill} />)}
           </ul>
         </div>
       </div>
@@ -233,7 +247,7 @@ const Skill = [
           aria-expanded="false"
           aria-controls="accordion-collapse-body-3"
         >
-          <span>OTROS PROGRAMAS</span>
+          <span>OTROS TECNOLOGIAS</span>
           <svg
             data-accordion-icon
             class="w-3 h-3  shrink-0"
@@ -260,7 +274,7 @@ const Skill = [
           class="p-5 border rounded-b-xl border-gray-200 dark:border-gray-700 dark:bg-gray-900"
         >
           <ul class="my-1 space-y-1 ">
-            {Skill.slice(17, 20).map((skill) => <SkillImg skill={skill} />)}
+            {Skill.slice(18, 22).map((skill) => <SkillImg skill={skill} />)}
           </ul>
         </div>
       </div>
