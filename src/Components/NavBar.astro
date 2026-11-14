@@ -4,7 +4,7 @@ import "../styles/NavBar.css";
 
 <nav class="nav-bar">
   <button class="nav-bar-btn">
-      <img src="img/logo1.webp" alt="Logo" class="w-9">
+      <img src="img/logo-1.webp" alt="Logo" class="w-9 theme-logo">
   </button>
   <button class="nav-bar-btn" id="themeToggleBtn">
       <!-- Icono de luna -->
@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnNav = document.querySelectorAll(".nav-bar-btn");
     const navBarButtons = document.querySelectorAll(".button, .button-correo");
     const titlesAndParagraphs = document.querySelectorAll(".title-1, .title-2, .title-3, .parrafo, li");
+    const themeLogos = document.querySelectorAll(".theme-logo");
     const imgLogo = document.querySelector(".img-logo");
     const buttonCopiar = document.querySelector(".button-copiar");
 
@@ -53,7 +54,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 btn.classList.add("hover:border-white");
             });
             titlesAndParagraphs.forEach((el) => el.classList.remove("text-negro"));
+            themeLogos.forEach((logo) => logo.setAttribute("src", "img/logo-1.webp"));
             imgLogo.classList.remove("border-negro");
+            imgLogo.classList.remove("img-logo-fondo-dia");
             buttonCopiar.classList.remove("button-copiar-claro");
 
         } else {
@@ -68,11 +71,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 btn.classList.add("hover:border-black");
             });
             titlesAndParagraphs.forEach((el) => el.classList.add("text-negro"));
+            themeLogos.forEach((logo) => logo.setAttribute("src", "img/logo.webp"));
             imgLogo.classList.add("border-negro");
+            imgLogo.classList.add("img-logo-fondo-dia");
             buttonCopiar.classList.add("button-copiar-claro");
         }
     });
 });
 ;
 </script>
-
